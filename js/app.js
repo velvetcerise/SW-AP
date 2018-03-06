@@ -1,42 +1,43 @@
 
+let container = document.getElementById('container');
+
 // console.log(container)
   function handleResponse(data){
       let entrie = data.results;
-      
-        let info = ' ';
-         console.log(entrie);
-       
-
-
-         let starWarsInfo = entrie.forEach(element =>{
-            return element.length;
-            console.log(starWarsInfo);
-         });
+      let info = ' ';
+        console.log(entrie);
+ 
+     let starWarsInfo = entrie.forEach(element =>{
+        let title = element.title;
+        //console.log(title);
+        let episode = element.episode_id;
+        //console.log(episode);
+        let character = element.characters;
+        //console.log(character);
+          info += 
         
+            `<div class="card">
+                <div class="card-image">
+                    <span class="card-title">${title}</span>
+                </div>
+                <div class="card-content">
+                    <p> ${episode} </p>
+                </div>
+                <div class="card-content">
+                    <p> ${character} </p>
+                </div>
+                <div class="card-action">
+                    <a href="#"></a>
+                </div>
+            </div>`
 
-// //     //painting   
-//       getCard += 
-      
-//         `<div class = 'row'>
-//         <div class="col s3 m7">
-//             <div class="card">
-//                 <div class="card-image">
-//                     <span class="card-title">${getUrl}</span>
-//                 </div>
-//                 <div class="card-content">
-//                     <p> ${getName} </p>
-//                 </div>
-//                 <div class="card-action">
-//                      <a href="#"></a>
-//                 </div>
-//             </div>
-//         </div>
-//         </div>`
+      container.innerHTML = info;
+        console.log(info);
 
+});
+           
 
-
-//       container.innerHTML = getCard;
-//       console.log(getCard)
+   
     }
       
         $.ajax({ 
