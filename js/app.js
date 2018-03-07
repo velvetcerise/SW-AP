@@ -1,21 +1,24 @@
 
 let container = document.getElementById('paint');
+// console.log(container);
 
-// console.log(container)
+console.log(container)
   function handleResponse(data){
     
       let entrie = data.results;
-       info += 
+      // info += 
         console.log(entrie);
  
      let starWarsInfo = entrie.forEach(element =>{
         let title = element.title;
-        //console.log(title);
+        console.log(title);
         let episode = element.episode_id;
-        //console.log(episode);
+        console.log(episode);
         let character = element.characters;
-        //console.log(character);
-            let info = ' ';
+        console.log(character);
+     
+    
+      info += 
            
         
             `<div class = 'row'>
@@ -35,24 +38,21 @@ let container = document.getElementById('paint');
                         </div>
                     </div>
                 </div>
-            </div>`
-                    
+            </div>`  
 
-     
-    })
+     })
      container.innerHTML = info;
-    console.log(info);       
-
-   
+    // console.log(info); 
     }
-      
-        $.ajax({ 
-            url: `https://swapi.co/api/films/`
+
+
+     $.ajax({ 
+           url: `https://swapi.co/api/films/`
         }).done(handleResponse); 
+    
 
-
-//Modal
-$(document).ready(function () {
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-});
+// //Modal
+// $(document).ready(function () {
+//     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+//     $('.modal').modal();
+// });
