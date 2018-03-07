@@ -6,7 +6,7 @@ console.log(container)
   function handleResponse(data){
     
       let entrie = data.results;
-      // info += 
+       info = " ";
         console.log(entrie);
  
      let starWarsInfo = entrie.forEach(element =>{
@@ -16,7 +16,7 @@ console.log(container)
         console.log(episode);
         let character = element.characters;
         console.log(character);
-     
+    //  
     
       info += 
            
@@ -24,9 +24,9 @@ console.log(container)
             `<div class = 'row'>
                  <div class= 'col s3 m7'>
                     <div class="card">
-                        <div class="card-image">
-                            <span class="card-title">${title}</span>
-                        </div>
+                        
+                            <span class="card-title"><strong>${title}</strong></span>
+                 
                         <div class="card-content">
                             <p> ${episode} </p>
                         </div>
@@ -51,8 +51,8 @@ console.log(container)
         }).done(handleResponse); 
     
 
-// //Modal
-// $(document).ready(function () {
-//     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-//     $('.modal').modal();
-// });
+//Modal
+$(document).ready(function () {
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+});

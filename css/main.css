@@ -10,3 +10,7 @@ body {
 .paint {
     color: white;
 }
+
+span {
+ font-weight: bold;
+}
