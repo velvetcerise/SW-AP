@@ -7,6 +7,10 @@ body {
     margin-top: 8vh;
 }
 
+#modal {
+    margin: 1vh;
+}
+
 .paint {
     color: white;
 }
